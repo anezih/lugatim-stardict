@@ -343,7 +343,8 @@ if __name__ == '__main__':
     parser.add_argument("-d", "--veri-dosyasi",
                         default=(BETIK_DY / "dosyalar" / "Kubbealti2023Ed.json.tar.gz"), dest="json",
                         help="""Girdilerin yer aldığı JSON dosyasının konumu. tar.gz ile sıkıştırılmış
-                        olabilir. JSON dosyasının yapısı için betiğin başında yer alan örneğe bakın.""")
+                        olabilir. JSON dosyasının yapısı README.md'de yer alan "JSON veri dosyasının yapısı"
+                        başlığına bakın.""")
     parser.add_argument("-s", "--ses-ekle", action="store_true", dest="bSes",
                         help="""Ses dosyaları sözlüğe eklensin.
                         Bu dosyalar sadece StarDict biçimine eklenmektedir.""")

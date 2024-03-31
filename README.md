@@ -5,9 +5,9 @@ Türkçe kökenli sözcüklerin kökenlerinin bir türlü bulunamadığı sözl�
 Veri ve ses dosyaları betikle birlikte gelmez, bunları kullanıcının kendisinin derlemesi gerekmektedir.
 
 # Kullanımı
-`python kubbealti.py --help`
+`python lugatim-stardict.py --help`
 ```
-usage: kubbealti.py [-h] [-d JSON] [-s] [-b {1,2,3}]
+usage: lugatim-stardict.py [-h] [-d JSON] [-s] [-b {1,2,3}]
 
     Kubbealtı Lugatı verilerini StarDict, Kobo dicthtml ve Kindle MOBI
     biçimlerine çeviren betik.
@@ -26,8 +26,8 @@ usage: kubbealti.py [-h] [-d JSON] [-s] [-b {1,2,3}]
 options:
   -h, --help            show this help message and exit
   -d JSON, --veri-dosyasi JSON
-                        Girdilerin yer aldığı JSON dosyasının konumu. tar.gz ile sıkıştırılmış olabilir. JSON dosyasının yapısı için betiğin
-                        başında yer alan örneğe bakın.
+                        Girdilerin yer aldığı JSON dosyasının konumu. tar.gz ile sıkıştırılmış olabilir. JSON dosyasının yapısı README.md'de yer alan
+                        "JSON veri dosyasının yapısı" başlığına bakın.
   -s, --ses-ekle        Ses dosyaları sözlüğe eklensin. Bu dosyalar sadece StarDict biçimine eklenmektedir.
   -b {1,2,3}, --bicim {1,2,3}
                         Sözlüğün dönüştürüleceği biçim. Geçerli seçenekler: 1 = StarDict, 2 = Kobo dicthtml, 3 = Kindle MOBI
