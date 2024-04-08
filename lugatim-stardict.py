@@ -325,6 +325,11 @@ class Kubbealti:
                           "-o", str(klasor / "dicthtml-tr.zip")],
                           stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 
+class ArgparseNS:
+    json: Path|str = BETIK_DY / "dosyalar" / "Kubbealti2023Ed.json.tar.gz"
+    bSes: bool = False
+    bicim: int = 1
+
 if __name__ == '__main__':
     parser = ArgumentParser(formatter_class=RawDescriptionHelpFormatter, description="""
     Kubbealtı Lugatı verilerini StarDict, Kobo dicthtml ve Kindle MOBI
@@ -343,7 +348,7 @@ if __name__ == '__main__':
     parser.add_argument("-d", "--veri-dosyasi",
                         default=(BETIK_DY / "dosyalar" / "Kubbealti2023Ed.json.tar.gz"), dest="json",
                         help="""Girdilerin yer aldığı JSON dosyasının konumu. tar.gz ile sıkıştırılmış
-                        olabilir. JSON dosyasının yapısı README.md'de yer alan "JSON veri dosyasının yapısı"
+                        olabilir. JSON dosyasının yapısı için README.md'de yer alan "JSON veri dosyasının yapısı"
                         başlığına bakın.""")
     parser.add_argument("-s", "--ses-ekle", action="store_true", dest="bSes",
                         help="""Ses dosyaları sözlüğe eklensin.
@@ -351,7 +356,7 @@ if __name__ == '__main__':
     parser.add_argument("-b", "--bicim", choices=[1,2,3], default=1, type=int, dest="bicim",
                         help="""Sözlüğün dönüştürüleceği biçim. Geçerli seçenekler:
                         1 = StarDict, 2 = Kobo dicthtml, 3 = Kindle MOBI""")
-    args = parser.parse_args()
+    args = parser.parse_args(namespace=ArgparseNS)
     kubbealti = Kubbealti(args.json, args.bSes)
     match args.bicim:
         case 1:
