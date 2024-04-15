@@ -83,4 +83,4 @@ Betiğe göstereceğiniz JSON dosyasının yapısı aşağıdaki şekilde olmal�
 
 # Not
 
-Sadece StarDict sürümü GoldenDict üzerinde denenmiş, Kindle ve Kobo versiyonları cihazlar üzerinde denenmemiştir.
+Sadece StarDict sürümü GoldenDict ve KOReader üzerinde denenmiş, Kindle ve Kobo versiyonları cihazlar üzerinde denenmemiştir.
